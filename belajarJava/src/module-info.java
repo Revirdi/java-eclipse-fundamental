@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author BocahPetir
+ *
+ */
+module belajarJava {
+}
