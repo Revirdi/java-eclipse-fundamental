@@ -23,6 +23,7 @@ public class Array_ {
 				{"Programmer"}
 		};
 		
+		System.out.println(members[0][0]);
 		System.out.println(arrayLong[0]);
 		System.out.println(arrayLong.length);
 		System.out.println(Arrays.toString(arrayLong)); // [10, 90, 80, 67, 29]

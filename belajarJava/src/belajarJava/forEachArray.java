@@ -8,7 +8,7 @@ public class forEachArray {
 		};
 		
 		for(var value : array) {
-			System.out.println(value);
+			System.out.println(value +" " + "bohong");
 		};
 
 	}
