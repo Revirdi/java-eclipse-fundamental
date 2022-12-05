@@ -20,13 +20,20 @@ public class TestInheritance {
 		employee.sayHello("Dwi"); // Hello Dwi my name is Manager Ardwiyan
 		
 		sayHello(new Employee("Ardwiyan"));
-		sayHello(new Manager("Ardwiyan"));
-		sayHello(new VicePresident("Ardwiyan"));
+		sayHello(new Manager("Revirdi"));
+		sayHello(new VicePresident("no life"));
 
 	}
 	
 	static void sayHello(Employee employee) {
-		System.out.println("Hello " + employee.name );
+		if(employee instanceof VicePresident) {
+			System.out.println("Hello VP " + employee.name );
+		} else if(employee instanceof Manager) {
+			System.out.println("Hello Manager " + employee.name );
+		} else {
+			System.out.println("Hello Employee " + employee.name );
+		}
+		
+		
 	}
-
 }
