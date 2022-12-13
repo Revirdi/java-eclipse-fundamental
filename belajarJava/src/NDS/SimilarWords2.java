@@ -14,23 +14,33 @@ public class SimilarWords2 {
 
 		for (int i = 0; i < s.length - 1; i++) {
 
-			String currentStr = s[i]; // ab
+			String currentStr = s[i];
 
-			for (int j = i; j < s.length - 1; j++) {
-				String nextStr = s[j]; // ba
-				String[] arrayNext = nextStr.split(""); // ["b", "a"]
-				for (int k = 0; k < arrayNext.length; k++) {
-					if (!currentStr.contains(arrayNext[k])) {
-						check = 0;
-					}
-					check = 1;
-				}
+			for (int j = i + 1; j < s.length; j++) {
+				String nextStr = s[j];
+
+				check = checkSimilarWords(currentStr, nextStr);
+
 			}
 			result += check;
 
 		}
 
 		return result;
+	}
+
+	public static int checkSimilarWords(String s, String t) {
+		String[] arrayT = t.split("");
+		int check = 0;
+
+		for (String z : arrayT) {
+			if (!s.contains(z)) {
+				check = 0;
+			}
+			check = 1;
+		}
+
+		return check;
 	}
 
 }

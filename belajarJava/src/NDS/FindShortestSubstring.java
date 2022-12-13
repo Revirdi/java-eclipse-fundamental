@@ -10,7 +10,6 @@ public class FindShortestSubstring {
 		String s = "imagination";
 
 		System.out.println(findShortestSubstring(s));
-		;
 
 	}
 
